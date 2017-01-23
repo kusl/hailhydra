@@ -3,12 +3,17 @@ image: node:latest
 pages:
   stage: deploy
   script:
+  - apt-get update -qq && apt-get install -y -qq tree
   - node --version
   - npm --version 
   - npm install -g angular-cli
+  - ng new blog
+  - tree
+  - ng build --target=production --environment=production
+  - ng test 
+  - ng e2e
   artifacts:
     paths:
     - public
   only:
   - master
-  
