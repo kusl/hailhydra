@@ -1,0 +1,13 @@
+image: node:latest
+
+pages:
+  stage: deploy
+  script:
+  - node --version
+  - npm --version 
+  - npm install -g angular-cli
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
