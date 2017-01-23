@@ -8,7 +8,10 @@ pages:
   - npm --version 
   - npm install -g angular-cli
   - ng version
-  - ng new blog --style=sass --verbose
+  - ng new blog --style=sass --verbose --skip-npm
+  - tree
+  - cd blog
+  - npm install
   - tree
   - ng build --target=production --environment=production
   - ng test 
