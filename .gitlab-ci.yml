@@ -13,11 +13,11 @@ pages:
   - cd blog
   - npm install
   - tree
-  - ng build --target=production --environment=production
+  - ng build
   - ng test 
   - ng e2e
   artifacts:
     paths:
-    - public
+    - dist
   only:
   - master
