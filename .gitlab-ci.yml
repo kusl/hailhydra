@@ -14,8 +14,6 @@ pages:
   - npm install
   - tree
   - ng build
-  - ng test 
-  - ng e2e
   artifacts:
     paths:
     - dist
